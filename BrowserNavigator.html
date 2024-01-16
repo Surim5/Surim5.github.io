@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="webpage.css">
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+           <div class="subnav">
+            <button class="subnavbtn">Course<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="https://gaia.cs.umass.edu/kurose_ross/authors.php">Kurose and Ross author/book page</a>
+                    <a href="http://w3schools.com">http://w3schools.com</a>
+                    <a href="https://www.geeksforgeeks.org/web-development/">https://www.geeksforgeeks.org/web-development/</a>
+                </div>
+            </div>
+            <div class="subnav">
+            <button class="subnavbtn">Browser<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="#Navigator">Navigator</a>
+                    <a href="#Window">Window</a>
+                    <a href="#Screen">Screen</a>
+                    <a href="#Location">Location</a>
+                    <a href="#Geolocation">Geolocation</a>
+
+                </div>
+            </div>
+            <div class="subnav">
+            <button class="subnavbtn">About<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="C:\Users\mikey\PycharmProjects\PythonStuff\Webpage\About.html">About Me</a>
+                    <a href="C:\Users\mikey\PycharmProjects\PythonStuff\Webpage\EmailForm.html">Email Form</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <h2>JavaScript Navigator Window</h2>
+    <p id="demo"></p>
+    <script>
+  // Get browser information
+        const browserInfo = {
+        width: navigator.appName,
+        product: navigator.product,
+        appVersion: navigator.appVersion,
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        language: navigator.language
+        };
+
+  // Convert object to JSON string
+
+        //infoText = JSON.stringify(browserInfo, null, 2);
+        tempText = "App Name = "+browserInfo.appName+"\n"+"Product = "+browserInfo.product+"\n"+"App Version = "+browserInfo.appVersion+"\n"+ "User Agent = "+browserInfo.userAgent+"\n"+"Platform = "+browserInfo.platform+"\n"+"Language = "+browserInfo.language+"\n";
+
+  // Display JSON string as text on the body
+
+        document.getElementById("demo").innerText = tempText;
+
+
+    </script>
+</body>
+
+</html>
